@@ -1,4 +1,4 @@
-![alt text](https://github.com/liuyehong/DTL/blob/main/logo.png?raw=true)
+![alt text](https://github.com/DelaunayTriangulationLearner/DTLearn/blob/main/logo.png?raw=true)
 
 DTLearn is a multi-processing Python Package for Delaunay Triangulation Learner and Its Ensembles. It is an end-to-end open source platform for machine learning. 
 
