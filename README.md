@@ -13,25 +13,11 @@ To install the prerequisites for the current release, which includes support for
 $ pip install numpy
 $ pip install scipy
 $ pip install pathos
+$ pip install sklearn
 ```
 
 
-
-# DLearn
-Random Crystal
-
-## Description
-The package contains modules including bagging DTL and random crystal, which can solve both regression and classification problems.
-
-## Prerequisites
-What things you need to install the software and how to install them
-```
-Scipy package
-Numpy package
-Scikit-learn package
-```
-
-## Instructions
+## Single-thread Implementation
 ### Bagging DTL
 ```
 DBaggingRegressor(n_estimator, max_dim, n_bootstrap, weight_inside, greedy)
@@ -218,7 +204,7 @@ print np.average(List_dbag)
 0.0671
 ```
 
-#### *Multi-CPU Ensemble DTL*
+#### *Multi-CPU Implementation*
 
 ```shell
 $ python
