@@ -23,6 +23,12 @@ $ python
 ```
 
 ```python
+from DTL import *
+import itertools
+from pathos.multiprocessing import Pool
+from contextlib import closing
+from Bagging_DTL_Multithread import *
+
 n = 10000
 p = 10
 X_train = np.random.uniform(size=[n, p])
