@@ -204,7 +204,7 @@ print np.average(List_dbag)
 0.0671
 ```
 
-#### *Multi-CPU Implementation*
+## Multi-thread Implementation
 
 ```shell
 $ python
