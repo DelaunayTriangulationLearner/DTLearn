@@ -230,6 +230,9 @@ bdtl.fit(X_train, Y_train)
 print bdtl.predict(X_train)
 ```
 
+## Cite DTLearn
+Liu, Y., & Yin, G. (2020). The Delaunay triangulation learner and its ensembles. Computational Statistics & Data Analysis, 107030.
+https://www.sciencedirect.com/science/article/abs/pii/S0167947320301213
 
 ## License
 
