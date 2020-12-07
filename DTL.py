@@ -54,7 +54,6 @@ class DTL():
 
 if __name__ == '__main__':
     from DataGenerator import *
-    from sklearn.ensemble import GradientBoostingRegressor
     n_train = 10000
     n_test = 10000
     p = 2
@@ -63,21 +62,8 @@ if __name__ == '__main__':
     X_test, Y_test = data_generator(f, n_test, p)  # generate testing data from f(X)
 
     bdtlr = DTL()
-    bdtlr.n_thread = 24
-
-    bdtlr.n_estimators = 1
-    bdtlr.n_bootstrap = 0.8
-    bdtlr.max_dim = 2
-    bdtlr.learning_rate = 1
     bdtlr.fit(X_train, Y_train)
 
-    print (bdtlr.mse(X_train, Y_train))
-    print (bdtlr.mse(X_test, Y_test))
-
-
-    gbt = GradientBoostingRegressor()
-    gbt.fit(X_train, Y_train)
-    print (np.var(Y_train - gbt.predict(X_train)))
-    print (np.var(Y_test - gbt.predict(X_test)))
+    bdtlr.predict(X_test)
 
 
