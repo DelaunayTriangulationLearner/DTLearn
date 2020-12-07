@@ -83,4 +83,4 @@ if __name__ == '__main__':
     bdtl = Bagging_DTL()
     bdtl.max_depth = 2
     bdtl.fit(X_train, Y_train)
-
+    print(bdtl.predict(X_test))
