@@ -282,10 +282,20 @@ if __name__ == '__main__':
     alpha = 1  # if the lambda is large, smaller alpha should be used.
 
     p = 2  # dimension of features
-    X_train, Y_train = data_generator(f, n_train, p)  # generate training data from f(X)
-    X_test, Y_test = data_generator(f, n_test, p)
+
+    n = 100
+    X1 = np.random.uniform(size=[20000, 1])
+    X2 = np.random.uniform(size=[20000, 1])
+    X = np.concatenate([X1, X2], axis=1)
+    Y = (X[:, 0] > 0.5).astype(int)
+
+    X_train = X[:10000, :]
+    X_test = X[10000:, :]
+    Y_train = Y[:10000]
+    Y_test = Y[10000:]
 
     fdl = F_D_Lambda_classifier(Lambda=100, alpha=1)
     fdl.quick_fit(X_train, Y_train)
-    #print fdl.score(X_test, Y_test)
+    print(fdl.predict(X_test))
+
 
